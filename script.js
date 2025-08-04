@@ -16,3 +16,21 @@ function loadIframe(clickedSummary) {
     }
   }
 }
+
+// FOR TIMMER
+
+var span = document.getElementById('OnlineTimmerSpan');
+
+function time() {
+  var d = new Date();
+  var p = d.getDate();
+  var r = d.getMonth() + 1;
+  var q = d.getFullYear();
+  var s = d.getSeconds();
+  var m = d.getMinutes();
+  var h = d.getHours();
+  span.textContent = 
+    ("0" + h).substr(-2) + ":" + ("0" + m).substr(-2) + ":" + ("0" + s).substr(-2) + " | " + ("0" + p).substr(-4) + "-" + ("0" + r).substr(-2) + "-" + ("0" + q).substr(-2) ;
+}
+
+setInterval(time, 1000);
